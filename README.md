@@ -11,6 +11,10 @@ This mod currently only works with The Walking Dead: The Telltale Definitive Ser
 
 3. Run the `.bat` file and the rest happens automagically!
 
+For the visual learners, here's a tutorial on how to install the mod in video form :)
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/l8BuY8M916I/0.jpg)](https://www.youtube.com/watch?v=l8BuY8M916I)
+
 ## Manual Installation
 
 1. Unpack `WDC_pc_Boot_data.ttarch2` using ttarchext. DO NOT use the `-m` or `-k` arguments!
