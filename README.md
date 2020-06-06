@@ -5,7 +5,7 @@ A mod for The Walking Dead: The Telltale Definitive Series that lets you load an
 # Warning
 **THIS IS THE EXPERIMENTAL BRANCH! IT MAY CONTAIN INCOMPLETE, BROKEN, OR BUGGY CODE. REQUIRES MANUAL COMPILATION & INSTALLATION! PROCEED WITH CAUTION.**
 
-[PLEASE SEE THE MAIN BRANCH HERE]([https://github.com/droyti/LoadAnyLevel](https://github.com/droyti/LoadAnyLevel))
+[**PLEASE SEE THE MAIN BRANCH HERE**](https://github.com/droyti/LoadAnyLevel)
 
 # Support
 
