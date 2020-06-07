@@ -1,4 +1,4 @@
---[[
+--[
 MIT License
 Copyright (c) 2020 Droyti
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -16,8 +16,11 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
---]]
+--]
+
 require("Chunk.lua")
+require("UI_Legend.lua")
+require("UI_Popup.lua")
 local kEpisodeLevels = {}
 kEpisodeLevels[101] = {"env_clementineHouseExterior","env_clementineHouseExterior_night","env_ClementineHouseInterior","env_drugstoreExterior","env_drugstoreInteriorPrologue","env_drugstoreOffice","env_hershelFarmExterior","env_hershelFarmExteriorNight","env_motorInn_end","env_motorInn_stealthMission","env_persistencetest","env_streetOutskirts","env_woodsClementine","NextTimeOn"}
 kEpisodeLevels[102] = {"env_dairyBarnDay","env_dairyBarnNight","env_dairyExteriorDay","env_dairyExteriorFence","env_dairyHouse","env_dairyMeatLocker","env_motorInn","env_motorInnFinale","env_woodsAbandonedCamp","env_woodsAbandonedCampDay","env_woodsBearTrap","env_woodsJoleneCamp","NextTimeOn","PreviouslyOn"}
@@ -124,10 +127,6 @@ Menu_LoadAnyLevel = function()
 end
 
 Menu_LoadLevel = function(levelEpisode, level)
-  local file = io.open("C:\\Users\\Violet\\Desktop\\CustomMenuText.txt", "w")
-  file:write(levelEpisode)
-  file:write(level)
-  file:close()
   SubProject_Switch(levelEpisode, level .. ".lua")
 end
 
@@ -143,8 +142,6 @@ Menu_LoadAnyLevelEpisode = function(episode)
     Menu_Add(Header, nil, self.episode)
     for _,level in ipairs(kEpisodeLevels[self.episode]) do
       Menu_Add(ListButtonLite, level, level, "Menu_LoadLevel(\"" .. "WalkingDead" .. self.episode .. "\", \"" .. level .. "\")")
-      --Menu_Add(ListButtonLite, (string.format)("season%s%s", self.season, character), (string.format)("character_%s", (string.lower)(character)), (string.format)("Menu_CharacterZoo( \"%s\", \"%s\" )", self.season, character), "zoo")
-    end
     local legendWidget = Menu_Add(Legend)
     legendWidget.Place = function(self)
       -- function num : 0_1_0_0 , upvalues : menu
@@ -175,4 +172,12 @@ Menu_LoadAnyLevelEpisode = function(episode)
   end
 
   Menu_Push(menu)
+end
+
+if IsToolBuild() then
+  ResourceSetDisable("SupportSeason1", true)
+  ResourceSetDisable("SupportSeason2", true)
+  ResourceSetDisable("SupportSeason3", true)
+  ResourceSetDisable("SupportSeason4", true)
+  ResourceSetDisable("SupportSeasonM", true)
 end
