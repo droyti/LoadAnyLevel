@@ -138,13 +138,10 @@ Menu_LoadAnyLevelEpisode = function(episode)
   menu.capacity = 10
   menu.showArrows = true
   menu.episode = episode
-  --menu.scene = "zoo_season" .. season
-  --menu.set = "SupportSeason" .. season
   menu.Populate = function(self)
     Menu_Add(Header, nil, self.episode)
     for _,level in ipairs(kEpisodeLevels[self.episode]) do
       Menu_Add(ListButtonLite, level, level, "Menu_LoadLevel(\"" .. "WalkingDead" .. self.episode .. "\", \"" .. level .. "\")")
-      --Menu_Add(ListButtonLite, (string.format)("season%s%s", self.season, character), (string.format)("character_%s", (string.lower)(character)), (string.format)("Menu_CharacterZoo( \"%s\", \"%s\" )", self.season, character), "zoo")
     end
     local legendWidget = Menu_Add(Legend)
     legendWidget.Place = function(self)
@@ -185,4 +182,5 @@ if IsToolBuild() then
   ResourceSetDisable("SupportSeason4", true)
   ResourceSetDisable("SupportSeasonM", true)
 end
+
 
