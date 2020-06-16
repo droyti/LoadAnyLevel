@@ -38,6 +38,14 @@ archiveToLoad=WalkingDead404
 scriptToLoad=BoardingSchoolExteriorGate
 ```
 
+## Known Issues
+
+This style of Telltale mod is quite new and was created without documentation! As such, there are a few known issues that are currently being worked out - none quite game breaking, but worth noting nonetheless.
+
+Sometimes there are display issues with the Load Any Level menu - this can (usually) be fixed by simply scrolling up or down, or using the arrow keys / D-pad. If that doesn't solve it, a simple restart of the game will.
+
+![Example of display issue](https://i.imgur.com/xxI7gsL.png)
+
 ## Support
 
 If you like this project and want to support it, subscribe to my YouTube channel! It's free & every new subscriber counts. I post updates about my mods there, too!
