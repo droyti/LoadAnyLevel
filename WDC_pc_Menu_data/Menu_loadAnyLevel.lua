@@ -336,6 +336,7 @@ Menu_LoadAnyLevel = function()
 
     menu.Populate = function(self)
         Menu_Add(Header, nil, "Load Any Level")
+        Menu_Add(ListButtonLite, "Load Custom Script", "Load Custom Script", "Menu_LoadAnyLevelCustom()")
         Menu_Add(ListButtonLite, "101", "101", "Menu_LoadAnyLevelEpisode( 101 )")
         Menu_Add(ListButtonLite, "102", "102", "Menu_LoadAnyLevelEpisode( 102 )")
         Menu_Add(ListButtonLite, "103", "103", "Menu_LoadAnyLevelEpisode( 103 )")
@@ -373,6 +374,15 @@ end
 
 Menu_LoadLevel = function(levelEpisode, level)
     SubProject_Switch(levelEpisode, level .. ".lua")
+end
+
+Menu_LoadAnyLevelCustom = function()
+  WidgetInputHandler_EnableInput(false)
+  local archiveName, cancel = Menu_OpenTextEntryBox("", Menu_Text("Enter Archive Name"), false, 12, true)
+  local scriptName, cancel = Menu_OpenTextEntryBox("", Menu_Text("Enter Script Name"), false, 12, true)
+  WidgetInputHandler_EnableInput(true)
+  Legend_Clear()
+  Menu_LoadLevel(archiveName, scriptName);
 end
 
 Menu_LoadAnyLevelEpisode = function(episode)
