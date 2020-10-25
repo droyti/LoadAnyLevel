@@ -1,4 +1,4 @@
---[[
+﻿--[[
 MIT License
 Copyright (c) 2020 Droyti
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -17,33 +17,33 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 --]]
-
+-- params : ...
+-- function num : 0 , upvalues : _ENV
 local LIP = require("LIP.lua")
-
-function file_exists(name)
-   local f=io.open(name,"r")
-   if f~=nil then io.close(f) return true else return false end
+file_exists = function(name)
+  -- function num : 0_0 , upvalues : _ENV
+  local f = (io.open)(name, "r")
+  if f ~= nil then
+    (io.close)(f)
+    return true
+  else
+    return false
+  end
 end
 
-
-if not file_exists("loadanylevel.ini") then
-    local creation =
-    {
-      boot =
-      {
-        overrideBootSequence = false,
-        archiveToLoad = 'Menu',
-        scriptToLoad = 'Menu_Main'
-      }
-    };
-
-    LIP.save("loadanylevel.ini", creation)
+do
+  if not file_exists("loadanylevel.ini") then
+    local creation = {
+boot = {overrideBootSequence = false, archiveToLoad = "Menu", scriptToLoad = "Menu_Main"}
+}
+    ;
+    (LIP.save)("loadanylevel.ini", creation)
+  end
+  local data = (LIP.load)("loadanylevel.ini")
+  if (data.boot).overrideBootSequence then
+    SubProject_Switch((data.boot).archiveToLoad, (data.boot).scriptToLoad .. ".lua")
+  else
+    LoadScript("BootTitle.lua")
+  end
 end
 
-local data = LIP.load("loadanylevel.ini")
-
-if data.boot.overrideBootSequence then
-  SubProject_Switch(data.boot.archiveToLoad, data.boot.scriptToLoad .. ".lua")
-else
-  LoadScript("BootTitle.lua")
-end

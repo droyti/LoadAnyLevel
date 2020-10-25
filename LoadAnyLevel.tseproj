@@ -1,0 +1,11 @@
+﻿{
+  "formatVersion": "1",
+  "tool": {
+    "game": "TTDS"
+  },
+  "mod": {
+    "name": "Load Any Level",
+    "version": "3.0",
+    "author": "Droyti"
+  }
+}
