@@ -1,9 +1,19 @@
-# LoadAnyLevel
+# Load Any Level
 A mod for The Walking Dead: The Telltale Definitive Series that lets you load any level in the game.
 
-This mod currently only works with The Walking Dead: The Telltale Definitive Series. It's also highly recommended that you back up your `WDC_pc_Boot_data.ttarch2` file! If you don't, you'll need to delete & verify or reinstall the game in order to return it to its original state!
+This mod currently only works with The Walking Dead: The Telltale Definitive Series.
 
 ## Installation
+
+### Version 4 and above
+
+1. Download the mod from https://github.com/droyti/LoadAnyLevel/releases.
+
+2. Extract the zip into your game's Archives folder
+
+### Version 3 and below
+
+> #### Warning: Before installing, it's hihgly recommended that you back up your `WDC_pc_Boot_data.ttarch2` and `WDC_pc_Menu_data.ttarch2` files! If not, and you wish to uninstall the mod, you'll have to delete these archives & verify your installation!
 
 1. Download the mod from https://github.com/droyti/LoadAnyLevel/releases.
 
@@ -11,7 +21,7 @@ This mod currently only works with The Walking Dead: The Telltale Definitive Ser
 
 3. Run the `.bat` file and the rest happens automagically!
 
-## Manual Installation
+#### Manual Installation - Version 3 and below
 
 1. Unpack `WDC_pc_Boot_data.ttarch2` & `WDC_pc_Menu_data.ttarch2` using ttarchext. DO NOT use the `-m` or `-k` arguments!
 
