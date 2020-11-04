@@ -9,7 +9,7 @@ This mod currently only works with The Walking Dead: The Telltale Definitive Ser
 
 1. Download the mod from https://github.com/droyti/LoadAnyLevel/releases.
 
-2. Extract the zip into your game's Archives folder
+2. Extract the zip into your game's root folder (where `WDC.exe` is located)
 
 ### Version 3 and below
 
