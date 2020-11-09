@@ -5,11 +5,15 @@ This mod currently only works with The Walking Dead: The Telltale Definitive Ser
 
 ## Installation
 
-### Version 4 and above
+### Version 3.1 and above
 
 1. Download the mod from https://github.com/droyti/LoadAnyLevel/releases.
 
-2. Extract the zip into your game's root folder (where `WDC.exe` is located)
+2. Use the (Telltale Mod Launcher)[https://github.com/Telltale-Modding-Group/TelltaleModLauncher] to install the mod automagically!
+
+#### Manual Installation - Version 3.1 and above
+
+1. Extract the zip into your game's Archives folder
 
 ### Version 3 and below
 
