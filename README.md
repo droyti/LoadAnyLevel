@@ -9,7 +9,7 @@ This mod currently only works with The Walking Dead: The Telltale Definitive Ser
 
 1. Download the mod from https://github.com/droyti/LoadAnyLevel/releases.
 
-2. Use the (Telltale Mod Launcher)[https://github.com/Telltale-Modding-Group/TelltaleModLauncher] to install the mod automagically!
+2. Use the [Telltale Mod Launcher](https://github.com/Telltale-Modding-Group/TelltaleModLauncher) to install the mod automagically!
 
 #### Manual Installation - Version 3.1 and above
 
