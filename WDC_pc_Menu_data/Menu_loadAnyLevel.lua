@@ -42,6 +42,9 @@ kEpisodeLevels[401] = {"BoardingSchoolBasement", "BoardingSchoolDorm", "Boarding
 kEpisodeLevels[402] = {"BellTower", "BoardingSchoolDorm", "BoardingSchoolDormNight", "BoardingSchoolExterior", "BoardingSchoolExteriorDamaged", "BoardingSchoolExteriorDusk", "BoardingSchoolExteriorGate", "BoardingSchoolExteriorGateNight", "BoardingSchoolExteriorNight", "BoardingSchoolInterior", "BoardingSchoolInteriorNight", "DormRoom", "ForestCamp", "ForestTile", "GreenHouse", "PreviouslyOn"}
 kEpisodeLevels[403] = {"BoardingSchoolDorm", "BoardingSchoolExteriorBasement", "BoardingSchoolInterior", "ForestBarn", "ForestCamp", "RiverBoat", "RiverShoreline", "RiverShorelineNight", "PreviouslyOn"}
 kEpisodeLevels[404] = {"BoardingSchoolDorm", "BoardingSchoolExterior", "BoardingSchoolExteriorGate", "Cave", "CliffBridge", "ForestBarn", "ForestShack", "FortMcCarrollRanch", "RiverBoat", "RiverShorelineNight", "PreviouslyOn"}
+kEpisodeLevels["M101"] = {"BoatTownApproach", "BoatTownEscape", "BoatTownShoreLineView", "DockChesapeakeBay", "DockChesapeakeBayRowBoat", "FerryExteriorDeck", "FerryInterior", "FlagshipExterior", "FlagshipExteriorDeck", "FlagshipExteriorEscape", "FlagshipExteriorNormaBranch", "FlagshipInterior", "FlagshipInteriorEscape", "NextTimeOn", "OpeningCredits101", "PreviouslyOn", "ShorelineApproachFerry", "ShoreLineCove"}
+kEpisodeLevels["M102"] = {"FlagshipExteriorEscape", "FlagshipInteriorEscape", "JohnsHouseExteriorLateNight", "JohnsHouseExteriorLawn", "JohnsHouseInteriorMain", "JohnsHouseWoodsTile", "NextTimeOn", "OpeningCredits102", "PreviouslyOn", "ShorelineApproachWoods", "WoodsTower"}
+kEpisodeLevels["M103"] = {"Epilogue", "JohnsHouseExteriorLawn_negotiate", "JohnsHouseExteriorLawn_retreat", "JohnsHouseExteriorLawn103", "JohnsHouseGarage", "JohnsHouseInteriorMain103", "JohnsHouseInteriorMainFire103", "JohnsHouseInteriorUpstairs_daughters", "JohnsHouseInteriorUpstairs_saveKids", "JohnsHouseInteriorUpstairs103", "NextTimeOn", "OpeningCredits103", "PeteBoatPrologue", "PreviouslyOn"}
 Menu_LoadAnyLevel = function()
   -- function num : 0_0 , upvalues : _ENV
   local playAllowed = Chunk_PlayGo_PreBeginPlay("Gallery")
@@ -95,6 +98,9 @@ Menu_LoadAnyLevel = function()
     Menu_Add(ListButtonLite, "402", "402", "Menu_LoadAnyLevelEpisode( 402 )")
     Menu_Add(ListButtonLite, "403", "403", "Menu_LoadAnyLevelEpisode( 403 )")
     Menu_Add(ListButtonLite, "404", "404", "Menu_LoadAnyLevelEpisode( 404 )")
+    Menu_Add(ListButtonLite, "M101", "M101", "Menu_LoadAnyLevelEpisode( 'M101' )")
+    Menu_Add(ListButtonLite, "M102", "M102", "Menu_LoadAnyLevelEpisode( 'M102' )")
+    Menu_Add(ListButtonLite, "M103", "M103", "Menu_LoadAnyLevelEpisode( 'M103' )")
     local legendWidget = Menu_Add(Legend)
     legendWidget.Place = function(self)
       -- function num : 0_0_2_0 , upvalues : menu
